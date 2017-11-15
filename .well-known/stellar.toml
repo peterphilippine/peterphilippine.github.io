@@ -1,0 +1,8 @@
+[[CURRENCIES]]
+code="HDCD"
+issuer="GCQELZMWIB7GY3K4HBWMNWDJ46SE62D2IBGY4QEPVOT3YTTXGJ57AKJX"
+display_decimals=2 
+name="Holiday Credit"
+desc="One HDCD has value of 10 USD and can claim one-day-stay (1PM-12PM) in one bedroom in the property."
+conditions="If HDCD real price is 5% different from theoratical price (based on Poloniex historical data) because of system failure or internet disconnection, we have the exclusive rights to correct impacted transactions."
+image=""
