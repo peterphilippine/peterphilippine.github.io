@@ -14,9 +14,25 @@ function getParamValues() {
    return urlparam;
 }
 	    var urlparam=getParamValues();
-      $.get( "robots.txt", function( data ) {
+ /**    $.get( "robots.txt", function( data ) {
 	  $( ".result" ).html( data+urlparam[1][1] );
 		});
+**/	    
+	    var postdata='{amount:2000,currency:"usd",source:"test",description:"this is a test"}';
+$.ajax({
+    type: 'POST',
+    url: 'https://api.stripe.com/v1/charges',
+    headers: {
+        "Authorization": "Basic " + "pk_test_2KMtyrFfRqhdriu2nbGQ5Xl900xfsVvOQN";
+    },
+    data: postdata,
+    success : function(data) {
+      alert();  
+    },
+   error: function (xhr,ajaxOptions,throwError){
+    //Error block 
+  },
+});
     </script>
     <p class="result" id="result">this is a test</p>
   </body>
