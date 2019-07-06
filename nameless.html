@@ -5,7 +5,7 @@
   <body>
     
     <script>
-function getParamValues () {
+function getParamValues() {
   var urlparam=[];
   var qstring = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
   for (var i = 0; i < qstring.length; i++) {
@@ -14,11 +14,9 @@ function getParamValues () {
    return urlparam;
 }
 	    var urlparam=getParamValues();
-	    alert("there");
       $.get( "robots.txt", function( data ) {
 	  $( ".result" ).html( data+urlparam[1][1] );
 		});
-	    alert("here");
     </script>
     <p class="result" id="result">this is a test</p>
   </body>
