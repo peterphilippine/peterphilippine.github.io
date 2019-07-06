@@ -7,15 +7,16 @@
     <script>
 	    function getParamValuesByName () {
   var qstring = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		    var urlparam=[][];
   for (var i = 0; i < qstring.length; i++) {
-    var urlparam = qstring[i].split('=');
+    urlparam[i] = qstring[i].split('=');
        return urlparam;
   }
 }
 	    var urlparam=getParamValuesByName();
 	    alert("there");
       $.get( "robots.txt", function( data ) {
-	  $( ".result" ).html( data+urlparam[0]+urlparam[1] );
+	  $( ".result" ).html( data+urlparam[0][0]+urlparam[0][1] );
 		});
 	    alert("here");
     </script>
