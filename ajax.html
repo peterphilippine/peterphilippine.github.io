@@ -1,1 +1,25 @@
 <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    
+    <script>
+function getParamValues() {
+  var urlparam=[];
+  var qstring = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  for (var i = 0; i < qstring.length; i++) {
+    urlparam[i] = qstring[i].split('=');
+  }
+   return urlparam;
+}
+	    var urlparam=getParamValues();
+   ( "http://www.baidu.com", function( data ) {
+  $( ".result" ).html(data);
+});
+     
+
+    </script>
+    <p class="result" id="result">this is a test</p>
+  </body>
+</html>
