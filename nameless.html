@@ -6,22 +6,10 @@
     
     <script>
 	    alert("there");
-      $.get( "http://www.baidu.com", function( data ) {
+      $.get( "robots.txt", function( data ) {
 	  $( ".result" ).html( data );
 		});
 	    alert("here");
-	    var jqxhr = $.get( "http://www.baidu.com, function() {
-  alert( "success" );
-})
-  .done(function() {
-    alert( "second success" );
-  })
-  .fail(function() {
-    alert( "error" );
-  })
-  .always(function() {
-    alert( "finished" );
-  });
     </script>
     <p class="result" id="result">this is a test</p>
   </body>
