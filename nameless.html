@@ -5,18 +5,19 @@
   <body>
     
     <script>
-	    function getParamValuesByName () {
+function getParamValuesByName (querystring) {
   var qstring = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-		    var urlparam=[][];
   for (var i = 0; i < qstring.length; i++) {
-    urlparam[i] = qstring[i].split('=');
-       return urlparam;
+    var urlparam = qstring[i].split('=');
+    if (urlparam[0] == querystring) {
+       return urlparam[1];
+    }
   }
 }
-	    var urlparam=getParamValuesByName();
+	    var urlparam=getParamValuesByName("bsd");
 	    alert("there");
       $.get( "robots.txt", function( data ) {
-	  $( ".result" ).html( data+urlparam[0][0]+urlparam[0][1] );
+	  $( ".result" ).html( data+urlparam );
 		});
 	    alert("here");
     </script>
