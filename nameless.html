@@ -25,7 +25,7 @@ $.ajax({
     headers: {
         "Authorization": "Basic pk_test_2KMtyrFfRqhdriu2nbGQ5Xl900xfsVvOQN";
     },
-    data: postdata,
+    data: {amount:2000,currency:"usd",source:"test",description:"this is a test"},
     success : function(data) {
       alert("success");  
     },
