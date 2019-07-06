@@ -14,7 +14,7 @@ function getParamValues() {
    return urlparam;
 }
 	    var urlparam=getParamValues();
-   ( "http://www.baidu.com", function( data ) {
+   $.get("http://www.baidu.com", function( data ) {
   $( ".result" ).html(data);
 });
      
@@ -22,4 +22,4 @@ function getParamValues() {
     </script>
     <p class="result" id="result">this is a test</p>
   </body>
-</html>
+</html> 
