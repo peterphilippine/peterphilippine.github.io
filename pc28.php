@@ -1,6 +1,8 @@
 <?php
 echo "start";
-$conn = mysqli_connect("sql102.byetcluster.com","24014377_1","7)6Sxp7[qN","epiz_24014377_w858");
+echo $_GET["sv"];
+var_dump($_SERVER);
+/* $conn = mysqli_connect($_GET["sv"],"24014377_1","7)6Sxp7[qN","epiz_24014377_w858");
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -27,4 +29,5 @@ die("error");
 }
 echo "OK";
 $conn->close();
+*/
 ?>
